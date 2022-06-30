@@ -1,25 +1,32 @@
-// ---------vertical-menu with-inner-menu-active-animation-----------
-var tabsVerticalInner = $('#accordian');
-var selectorVerticalInner = $('#accordian').find('li').length;
-var activeItemVerticalInner = tabsVerticalInner.find('.active');
-var activeWidthVerticalHeight = activeItemVerticalInner.innerHeight();
-var activeWidthVerticalWidth = activeItemVerticalInner.innerWidth();
-var itemPosVerticalTop = activeItemVerticalInner.position();
-var itemPosVerticalLeft = activeItemVerticalInner.position();
+$(document).ready(function(){
+	let liveSearchBtn = $('#serachlive-btn')
+	liveSearchBtn.click(function(event){
+		event.preventDefault()
+		console.log(liveSearchBtn)
+	})
+
+})
+//vertical-menu with-inner-menu-active-animation
+let tabsVerticalInner = $('#accordian');
+let selectorVerticalInner = $('#accordian').find('li').length;
+let activeItemVerticalInner = tabsVerticalInner.find('.active');
+let activeWidthVerticalHeight = activeItemVerticalInner.innerHeight();
+let activeWidthVerticalWidth = activeItemVerticalInner.innerWidth();
+let itemPosVerticalTop = activeItemVerticalInner.position();
+let itemPosVerticalLeft = activeItemVerticalInner.position();
 $(".selector-active").css({
 	"top":itemPosVerticalTop.top + "px", 
 	"left":itemPosVerticalLeft.left + "px",
 	"height": activeWidthVerticalHeight + "px",
 	"width": activeWidthVerticalWidth + "px"
 });
-
 $("#accordian").on("click","li",function(e){
 	$('#accordian ul li').removeClass("active");
 	$(this).addClass('active');
-	var activeWidthVerticalHeight = $(this).innerHeight();
-	var activeWidthVerticalWidth = $(this).innerWidth();
-	var itemPosVerticalTop = $(this).position();
-	var itemPosVerticalLeft = $(this).position();
+	let activeWidthVerticalHeight = $(this).innerHeight();
+	let activeWidthVerticalWidth = $(this).innerWidth();
+	let itemPosVerticalTop = $(this).position();
+	let itemPosVerticalLeft = $(this).position();
 	$(".selector-active").css({
 		"top":itemPosVerticalTop.top + "px", 
 		"left":itemPosVerticalLeft.left + "px",
@@ -27,17 +34,15 @@ $("#accordian").on("click","li",function(e){
 		"width": activeWidthVerticalWidth + "px"
 	});
 });
-// --------------add active class-on another-page move----------
+//add active class-on another-page move
 jQuery(document).ready(function($){
   // Get current path and find target link
-  var path = window.location.pathname.split("/").pop();
-
+  let path = window.location.pathname.split("/").pop();
   // Account for home page with empty path
   if ( path == '' ) {
     path = 'index.html';
   }
-
-  var target = $('#accordian ul li a[href="'+path+'"]');
+  let target = $('#accordian ul li a[href="'+path+'"]');
   // Add active class to target link
   target.parent().addClass('active');
 });

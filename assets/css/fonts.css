@@ -1,0 +1,18 @@
+@font-face{
+    font-family: 'yekan';
+    font-weight: 500;
+    src: url("../fonts/iranyekanwebmediumfanum.woff") format("woff"),
+    url("../fonts/iranyekanwebmediumfanum.eot") format("eot");
+}
+@font-face{
+    font-family: 'yekan';
+    font-weight: 400;
+    src: url("../fonts/iranyekanwebregularfanum.woff") format("woff"),
+    url("../fonts/iranyekanwebregularfanum.eot") format("eot");
+}
+@font-face{
+    font-family: 'yekan';
+    font-weight: 700;
+    src: url("../fonts/iranyekanwebboldfanum.woff") format("woff"),
+    url("../fonts/iranyekanwebboldfanum.eot") format("eot");
+}
