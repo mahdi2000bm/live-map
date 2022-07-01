@@ -24,14 +24,19 @@ h6{
 	color:#777;
 }
 div.wrapper {
-    padding: 24px;
+    padding: 0px;
 }
 section {
     height: 100vh;
     background: rgba(255,255,255,0.85);
 }
+header {
+    position: absolute;
+    z-index: 999;
+}
 nav {
-    width: calc(100% - 220px);
+	margin-top: 20px;
+    width: calc(100% - 230px);
     float: left;
 }
 .serachlive {
@@ -41,9 +46,8 @@ nav {
     width: 400px;
     border-radius: 16px;
     padding: 2px;
-    align-items: centers;
-    background: linear-gradient(225deg, #4c23a92b, #ffffff);
-    box-shadow: 0px -1px 100px #f5f5f5, 0px 0px 100px #ffffff;
+    background: linear-gradient(225deg, #ffffff, #ffffff);
+    box-shadow: 4px 6px 100px #0000001c, 0px 0px 100px #00000005;
 }
 input#livesearch {
 	background-color: transparent;
@@ -76,7 +80,7 @@ span.icon-btn svg {
 	top: 0;
 	right: 0;
 	position: absolute;
-	padding-left: 0px;
+	padding-right: 0px;
 }
 .main-navbar{
 	position: relative;
@@ -144,8 +148,8 @@ i.height-min svg {
 	transition-duration:0.6s;
 	transition-timing-function: cubic-bezier(0.17, 0.8, 0.43, 0.9);
 	background-color: #fff;
-	border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
+	border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 .selector-active .top,
 .selector-active .bottom{
@@ -153,7 +157,7 @@ i.height-min svg {
 	width: 25px;
 	height: 25px;
 	background-color: #fff;
-	left: 0;
+	right: 0;
 }
 .selector-active .top{
 	top: -25px;
@@ -171,10 +175,17 @@ i.height-min svg {
     background-color: #3a0ca3;
 }
 .selector-active .top:before{
-	left: 0px;
+	left: -25px;
 	top: -25px;
 }
 .selector-active .bottom:before{
 	bottom: -25px;
-	left: 0px;
+	left: -25px;
+}
+section#map-tilelayer {
+    width: 100%;
+	outline: 0;
+}
+.leaflet-bottom.leaflet-right{
+	display: none !important;
 }
