@@ -1,15 +1,24 @@
-let map = L.map('map-tilelayer').setView([32.6485,51.6801], 16);
-
-let tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19
-}).addTo(map);
-
 $(document).ready(function(){
 	let liveSearchBtn = $('#serachlive-btn')
 	liveSearchBtn.click(function(event){
 		event.preventDefault()
 		console.log(liveSearchBtn)
 	})
+	//map initialize
+	let location = [32.6485,51.6801]
+	let map = L.map('map-tilelayer').setView(location, 16);
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19
+	}).addTo(map);
+
+	L.marker(location).addTo(map).bindPopup('اصفهان').openPopup();
+
+	let North = map.getBounds().getNorth()
+	let south = map.getBounds().getSouth()
+	let East = map.getBounds().getEast()
+	let West = map.getBounds().getWest()
+
+
 })
 //vertical-menu with-inner-menu-active-animation
 let tabsVerticalInner = $('#accordian');
