@@ -69,8 +69,16 @@
             </header>
         </div>
     <section id="map-tilelayer">
-
+        <div id="modal-location" class="modal">
+            <form action="POST" class="modal-form">
+                <div class="coordinates"><span>طول جغرافیایی</span> : <span id="lngLoc">Long</span></div>
+                <div class="coordinates"><span>عرض جغرافیایی</span> : <span id="latLoc">Lat</span></div>
+                <input id="bussinessId" placeholder="نام کسب‌وکار شما" type="text">
+                <input type="submit" value="ثبت مکان">
+            </form>
+        </div>
     </section>
+    
     <script src='../assets/js/jquery.js'></script>
     <script src="../assets/js/map.js"></script>
     <script src="../assets/js/public.js"></script>

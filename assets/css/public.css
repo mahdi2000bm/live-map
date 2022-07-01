@@ -5,6 +5,7 @@
 	padding: 0;
 	font-family: 'yekan', sans-serif;
 	font-weight: 500;
+	outline: 0 !important;
 }
 body {
     margin: 0 !important;
@@ -188,4 +189,25 @@ section#map-tilelayer {
 }
 .leaflet-bottom.leaflet-right{
 	display: none !important;
+}
+.modal {
+	display: none;
+    z-index: 9999;
+    position: absolute;
+    left: 50%;
+    min-width: 280px;
+    padding: 15px;
+    border-radius: 16px;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    box-shadow: 4px 6px 100px #0000001c, 0px 0px 100px #00000005;
+    background: #fff;
+}
+form.modal-form input {
+    display: block;
+    padding: 4px 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 50%;
 }
