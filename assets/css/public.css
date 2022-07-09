@@ -192,6 +192,7 @@ section#map-tilelayer {
 }
 .modal {
 	display: none;
+	cursor: default;
     z-index: 9999;
     position: absolute;
     left: 50%;
@@ -203,11 +204,10 @@ section#map-tilelayer {
     box-shadow: 4px 6px 100px #0000001c, 0px 0px 100px #00000005;
     background: #fff;
 }
-form.modal-form input {
+form.modal-form input, #type-location {
     display: block;
     padding: 4px 8px;
     margin: 8px 0;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 50%;
 }

@@ -75,9 +75,10 @@
                 <div class="coordinates"><span>عرض جغرافیایی</span> : <span id="latLoc">Lat</span></div>
                 <input id="bussinessId" placeholder="نام کسب‌وکار شما" type="text">
                 <select id="type-location">
-                    <option value="volvo">مسجد</option>
-                    <option value="saab">کافه</option>
-                    <option value="opel">پارک</option>  
+                    <option value="">نوع کسب‌وکار خود را انتخاب کنید</option>
+                    <?php foreach ($locationTypes as $key => $value) : ?>
+                           <option value="<?=$key?>"><?=$value?></option>
+                    <?php endforeach;?>
                 </select>
 
                 <input type="submit" value="ثبت مکان">
