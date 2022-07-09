@@ -70,10 +70,16 @@
         </div>
     <section id="map-tilelayer">
         <div id="modal-location" class="modal">
-            <form action="POST" class="modal-form">
+            <form action="POST" id="data-record" class="modal-form">
                 <div class="coordinates"><span>طول جغرافیایی</span> : <span id="lngLoc">Long</span></div>
                 <div class="coordinates"><span>عرض جغرافیایی</span> : <span id="latLoc">Lat</span></div>
                 <input id="bussinessId" placeholder="نام کسب‌وکار شما" type="text">
+                <select id="type-location">
+                    <option value="volvo">مسجد</option>
+                    <option value="saab">کافه</option>
+                    <option value="opel">پارک</option>  
+                </select>
+
                 <input type="submit" value="ثبت مکان">
             </form>
         </div>
