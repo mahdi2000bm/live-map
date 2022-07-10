@@ -209,5 +209,14 @@ form.modal-form input, #type-location {
     padding: 4px 8px;
     margin: 8px 0;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 4px;
+}
+form.modal-form input[type="submit"] {
+    background: #1dc21d;
+    color: #fff;
+    border: 0 !important;
+	cursor: pointer;
+}
+form.modal-form input[type="submit"]:hover {
+    background: #00b100;
 }
