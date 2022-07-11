@@ -3,7 +3,7 @@
       die('invalid request!');    
     }
 
-    include 'bootstrap/init.php';
+    include  '../bootstrap/init.php';
 
     if(isset($_POST['action']))
     {

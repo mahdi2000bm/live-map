@@ -24,12 +24,16 @@
 		// let south = map.getBounds().getSouth()
 		// let East = map.getBounds().getEast()
 		// let West = map.getBounds().getWest()
-
+		let lat
+		let lng
 		map.on('dblclick' , function(event){
 			L.marker(event.latlng).addTo(map)
 			document.getElementById('modal-location').style.setProperty('display','block')
-			document.getElementById('lngLoc').innerHTML = event.latlng.lng 	
-			document.getElementById('latLoc').innerHTML = event.latlng.lat 	
+			lat = event.latlng.lng 
+			lng = event.latlng.lat 	
+			document.getElementById('lngLoc').innerHTML = lng
+			document.getElementById('latLoc').innerHTML = lat
+
 		})
 
 		let formRecord = document.getElementById('data-record')
@@ -39,22 +43,24 @@
 			let businame = document.getElementById('bussinessId').value
 			let busitype = document.getElementById('type-location').value
 
-			if(formvalidation(businame,busitype))
-
+			if(formvalidation(businame,busitype)){
 				$.ajax({	
 					type: "POST",
-					url: "process/record-location.php",
+					url: "http://localhost/Livemap/process/record-location.php",
 					data: {
 						action: "record-business",
 						namebusiness : businame,
-						typebusiness : busitype
+						typebusiness : busitype,
+						latloc : lat,
+						lngloc : lng
 					},
 					dataType: "JSON",
 					success: function (response) {
 						console.log(response)
 					}
 				});
-
+				document.getElementById('modal-location').style.setProperty('display','none')
+			}
 			})
 	})
 

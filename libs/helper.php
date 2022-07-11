@@ -1,5 +1,6 @@
 <?php
-    function notif(Type $msg = null)
+    function notif($msg = null)
     {
         return $msg;
     }
+    

@@ -1,8 +1,8 @@
 <?php 
     function insertLocation($data){
-        global $pdo;
-        $sql = "INSERT INTO `business_locations` (`title`, `lat`, `lng`, `type`) VALUES (:title, :lat, :lng, :typ);";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([':title'=>$data['title'],':lat'=>$data['lat'],':lng'=>$data['lng'],':typ'=>$data['type']]);
+        global $conn;
+        $sql = "INSERT INTO `business_locations` (`b_name`, `lat`, `lng`, `b_type`) VALUES (:title, :lat, :lng, :typ);";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([':title'=>$data['namebusiness'],':lat'=>$data['latloc'],':lng'=>$data['lngloc'],':typ'=>$data['typebusiness']]);    
         return $stmt->rowCount();
     }

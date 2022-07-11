@@ -9,5 +9,5 @@
         die($result_e);
     }
 
-    include 'libs/helper.php';
-    include 'libs/libs-location.php';
+     include  BASEPATH . '\libs\helper.php';
+     include BASEPATH . '\libs\libs-location.php';
