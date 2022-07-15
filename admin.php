@@ -17,7 +17,8 @@
     }
 
     if(isLoggedin())
-    {
+    {   
+        $locations = getLocations();
         include "tpl/tpl-panel.php";
 
     }else{
