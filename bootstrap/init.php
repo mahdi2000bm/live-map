@@ -1,5 +1,7 @@
 <?php 
     include 'const.php';
+
+    defined(BASEPATH) || die('permission denid!');
     include 'config.php';
 
     $dsn = "mysql:dbname=$dbConfig->dbname;host=$dbConfig->hostname;";

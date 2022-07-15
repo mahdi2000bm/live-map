@@ -83,10 +83,10 @@
     <div class="main-panel">
         <h1>پنل مدیریت <span style="color:#007bec">سون مپ</span></h1>
         <div class="box">
-            <a class="statusToggle" href="<?= BASEURL ?>" target="_blank">🏠</a>
+            <a class="statusToggle" href="<?= BASEURL ?>" >نقشه</a>
             <a class="statusToggle active" href="?status=1">فعال</a>
             <a class="statusToggle" href="?status=0">غیرفعال</a>
-            <a class="statusToggle" href="?logout=1" style="float:left" target="_blank">خروج</a>
+            <a class="statusToggle" href="?logout=1" style="float:left">خروج</a>
         </div>
         <div class="box">
         <table class="tabe-locations">

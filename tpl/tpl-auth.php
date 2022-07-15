@@ -1,9 +1,13 @@
+<?php   
+    defined(BASEPATH) || die('permission denid!');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7Map Panel</title>
+    <title>Livemap Panel</title>
     <link href="favicon.png" rel="shortcut icon" type="image/png">
 
     <link rel="stylesheet" href="assets/css/styles.css<?="?v=" . rand(99, 9999999)?>" />
@@ -42,19 +46,26 @@
         box-sizing: border-box;
         margin: 5px;
     }
+    input[type="submit"] {
+    background: #297cfd;
+    color: #fff;
+}
     </style>
 </head>
 <body>
     <div class="main-panel">
-    <h1>ورود به پنل مدیریت <span style="color:#007bec">سون مپ</span></h1>
+    <h1>ورود به پنل مدیریت <span style="color:#007bec">لایو مپ</span></h1>
         <div class="box">
-            <form action="" method="post">
+            <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
                 <input type="text" name="username" placeholder="Username" autocomplete="off"><br>
                 <input type="password" name="password" placeholder="Password" autocomplete="off"><br>
                 <input type="submit" value="Login" style="text-align: center">
             </form>
         </div>
     </div>
-
+    
+    <script>
+        
+    </script>
 </body>
 </html>
