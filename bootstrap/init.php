@@ -1,8 +1,9 @@
 <?php 
     include 'const.php';
     include 'config.php';
+    include 'vendor/autoload.php';
 
-    $dsn = "mysql:dbname=$dbConfig->dbname;host=$dbConfig->hostname;";
+    $dsn =  "mysql:dbname=$dbConfig->dbname;host=$dbConfig->hostname;";
     try {
         $conn = new PDO($dsn, "root", "");
     } catch (PDOException $result_e) {

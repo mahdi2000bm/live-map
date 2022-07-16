@@ -1,7 +1,7 @@
 <?php 
     session_start();
     include "bootstrap/init.php";
-    
+
 
     if(isset($_GET["logout"]) && $_GET["logout"] == 1)
     {  
@@ -18,7 +18,8 @@
 
     if(isLoggedin())
     {   
-        $locations = getLocations();
+        $filters = $_GET ?? [];
+        $locations = getLocations($filters);
         include "tpl/tpl-panel.php";
 
     }else{

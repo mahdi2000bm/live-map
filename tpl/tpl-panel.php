@@ -1,3 +1,6 @@
+<?php     
+    use Hekmatinasser\Verta\Verta;
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,19 +119,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for($i=0;$i<10;$i++): ?>
+                    <?php foreach($locations as $loc): ?>
                     <tr>
-                        <td>نام مکان اینجا</td>
-                        <td class="text-center">12 خرداد 95</td>
-                        <td class="text-center">25.454</td>
-                        <td class="text-center">34.456</td>
+                        <td><?= $loc->b_name?></td>
+                        <td class="text-center"><?= Verta::instance( $loc->record_at)->format(' %d %B %Y')?></td>
+                        <td class="text-center"><?= $loc->b_lat?></td>
+                        <td class="text-center"><?= $loc->b_lng?></td>
                         <td>
                             <button class="statusToggle active" data-loc='111'>فعال</button>
                             <button class="statusToggle" data-loc='111'>غیر فعال</button>
-                            <button class="preview" data-loc='111'>👁️‍🗨️</button>
+                            <button class="preview" data-loc='<?= $loc->id?>'>👁️‍🗨️</button>
                         </td>
                     </tr>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
