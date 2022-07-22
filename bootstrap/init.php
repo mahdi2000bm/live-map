@@ -6,6 +6,7 @@
     $dsn =  "mysql:dbname=$dbConfig->dbname;host=$dbConfig->hostname;";
     try {
         $conn = new PDO($dsn, "root", "");
+        echo "OK";
     } catch (PDOException $result_e) {
         die($result_e);
     }
