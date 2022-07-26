@@ -1,7 +1,3 @@
-<?php   
-    defined(BASEPATH) || die('permission denid!');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

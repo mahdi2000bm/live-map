@@ -1,7 +1,7 @@
 <?php 
     include 'const.php';
     include 'config.php';
-    // include 'vendor/autoload.php';
+    include 'vendor/autoload.php';
 
     $dsn =  "mysql:dbname=$dbConfig->dbname;host=$dbConfig->hostname;";
     try {
@@ -11,6 +11,6 @@
         die($result_e);
     }
 
-     include BASEPATH . '\libs\helper.php';
-     include BASEPATH . '\libs\libs-location.php';
-     include BASEPATH . '\libs\auth.php';
+    include BASEPATH . '\libs\helper.php';
+    include BASEPATH . '\libs\libs-location.php';
+    include BASEPATH . '\libs\auth.php';

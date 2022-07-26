@@ -100,7 +100,7 @@
 
 <body>
     <div class="main-panel">
-        <h1>پنل مدیریت <span style="color:#007bec">سون مپ</span></h1>
+        <h1>پنل صفحه ساز <span style="color:#4762e7">شامرو</span></h1>
         <div class="box">
             <a class="statusToggle" href="<?= BASEURL ?>">نقشه</a>
             <a class="statusToggle active" href="?status=1">فعال</a>
