@@ -1,7 +1,7 @@
 <?php 
     include 'const.php';
     include 'config.php';
-    include 'vendor/autoload.php';
+    // include 'vendor/autoload.php';
 
     $dsn =  "mysql:dbname=$dbConfig->dbname;host=$dbConfig->hostname;";
     try {

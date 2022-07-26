@@ -44,21 +44,40 @@
 			let busitype = document.getElementById('type-location').value
 
 			if(formvalidation(businame,busitype)){
-				$.ajax({	
-					type: "POST",
-					url: "http://localhost/Livemap/process/record-location.php",
-					data: {
-						action: "record-business",
-						namebusiness : businame,
-						typebusiness : busitype,
-						latloc : lat,
-						lngloc : lng
-					},
-					dataType: "JSON",
-					success: function (response) {
-						console.log(response)
-					}
-				});
+				// $.ajax({	
+				// 	type: "POST",
+				// 	url: "http://localhost/Livemap/process/record-location.php",
+				// 	data: {
+				// 		action: "record-business",
+				// 		namebusiness : businame,
+				// 		typebusiness : busitype,
+				// 		latloc : lat,
+				// 		lngloc : lng
+				// 	},
+				// 	dataType: "JSON",
+				// 	success: function (response) {
+				// 		console.log(response)
+				// 	}
+				// });
+				
+				var data={
+					action: "record-business",
+					namebusiness : businame,
+					typebusiness : busitype,
+					latloc : lat,
+					lngloc : lng
+				  };
+				  makeRequest('POST', "http://localhost/Livemap/process/record-location.php",data).then(function(data){
+						var results=JSON.parse(data);
+				  });
+				
+				function makeRequest (method, url, data) {
+					let xhr = new XMLHttpRequest();
+					xhr.open(method, url);
+					xhr.send(data);
+					xhr.send();
+				}
+
 				document.getElementById('modal-location').style.setProperty('display','none')
 			}
 			})
