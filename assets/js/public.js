@@ -44,6 +44,7 @@
 			let busitype = document.getElementById('type-location').value
 
 			if(formvalidation(businame,busitype)){
+
 				// $.ajax({	
 				// 	type: "POST",
 				// 	url: "http://localhost/Livemap/process/record-location.php",
@@ -68,7 +69,7 @@
 					lngloc : lng
 				  };
 				  makeRequest('POST', "http://localhost/Livemap/process/record-location.php",data).then(function(data){
-						var results=JSON.parse(data);
+					var results=JSON.parse(data);
 				  });
 				
 				function makeRequest (method, url, data) {
