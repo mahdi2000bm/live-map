@@ -49,7 +49,7 @@
     </style>
 </head>
 <body>
-    <div class="main-panel">
+    <div clas`s="main-panel">
     <h1>ورود به پنل مدیریت <span style="color:#007bec">شامرو</span></h1>
         <div class="box">
             <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
