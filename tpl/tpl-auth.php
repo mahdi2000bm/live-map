@@ -50,7 +50,7 @@
 </head>
 <body>
     <div class="main-panel">
-    <h1>ورود به پنل مدیریت <span style="color:#007bec">لایو مپ</span></h1>
+    <h1>ورود به پنل مدیریت <span style="color:#007bec">شامرو</span></h1>
         <div class="box">
             <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
                 <input type="text" name="username" placeholder="Username" autocomplete="off"><br>
@@ -61,7 +61,6 @@
     </div>
     
     <script>
-        
-    </script>
+ </script>
 </body>
 </html>
