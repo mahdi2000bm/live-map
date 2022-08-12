@@ -44,22 +44,6 @@
 			let busitype = document.getElementById('type-location').value
 
 			if(formvalidation(businame,busitype)){
-
-				// $.ajax({	
-				// 	type: "POST",
-				// 	url: "http://localhost/Livemap/process/record-location.php",
-				// 	data: {
-				// 		action: "record-business",
-				// 		namebusiness : businame,
-				// 		typebusiness : busitype,
-				// 		latloc : lat,
-				// 		lngloc : lng
-				// 	},
-				// 	dataType: "JSON",
-				// 	success: function (response) {
-				// 		console.log(response)
-				// 	}
-				// });
 				
 				var data={
 					action: "record-business",
